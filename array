@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+int main() 
+{
+    int i,j,a[10]={1,2,3,1,2,3,1,2,3,4},b[10][10],p,c=0,q=0,r=0,z[10],y=0;
+    
+    for(i=0;i<10;i++)
+    {
+        c=0;
+        p=a[i];
+        if(a[i]!=-1)
+        {
+            b[q][c++]=a[i];
+            for(j=0;j<10;j++)
+            {
+                if(a[i]==a[j])
+                {
+                    b[q][c++]=j;
+                }
+            }
+            for(j=0;j<10;j++)
+            {
+                if(a[j]==p)
+                {
+                    a[j]=-1;
+                }
+            }
+            q++;
+            z[y++]=c;
+            r++;
+        }
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<z[i];j++)
+        {
+            printf("%d ",b[i][j]);
+        }
+        printf("\n");
+    }
+}
